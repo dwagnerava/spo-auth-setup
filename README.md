@@ -4,7 +4,7 @@ This repository helps you validate app-only authentication to SharePoint Online 
 
 It includes:
 - `create_spo_app_cert.ps1`: creates a self-signed certificate and exports `.cer` + `.pfx`
-- `call_spo_odata_web.py`: acquires an Entra ID token (certificate or client secret) and calls SharePoint REST
+- `call_spo_odata_web.py`: acquires an Entra ID token (certificate) and calls SharePoint REST
 
 ## Prerequisites
 
@@ -59,8 +59,6 @@ The script prints the certificate thumbprint and file paths after creation.
 5. If using certificate auth:
 - Go to `Certificates & secrets` -> `Certificates`
 - Upload the generated `.cer` file
-6. If using secret auth instead:
-- Create a client secret and save its value
 
 ## 4) Grant site-level app access in SharePoint (if required)
 
@@ -83,7 +81,7 @@ AZURE_CERT_PFX_PATH=cert-output/spo-auth-setup.pfx
 AZURE_CERT_PFX_PASSWORD=your-pfx-password
 ```
 
-### Client secret auth example
+### Client secret auth example (Do not use, no longer supported)
 
 ```dotenv
 AZURE_TENANT_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
