@@ -23,7 +23,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## 2) Create a certificate for app auth (optional but recommended)
+## 2) Create a certificate for app auth (required)
 
 Run:
 
